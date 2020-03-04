@@ -1,0 +1,39 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do list</title>
+  <link rel="stylesheet" 
+  href="{% static '/css/styles.css' %}">
+</head>
+
+<body>
+
+<div class="box" id="heading">
+    <h1>{{listTitle}}</h1>
+  </div>
+  <div class="box">
+    <!-- <% for(var i=0;i<newListItems.length;i++){ %> -->
+        {% for i in newListItems %}
+    <div class="item">
+      <input type="checkbox">
+        <p>{{i}}</p>
+          
+    </div>
+    {%endfor%}
+    <!-- <% } %> -->
+    <form class="item" action="add" method="POST">
+        {% csrf_token %}
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="submit" name="list" value={{listTitle}}>+</button>
+    </form>
+
+  </div>
+
+</body>
+<footer>Made by Ankur Kunal</footer>
+</html>
