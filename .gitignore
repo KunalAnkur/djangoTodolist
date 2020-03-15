@@ -1,4 +1,7 @@
 
+# Created by https://www.gitignore.io/api/react,django
+# Edit at https://www.gitignore.io/?templates=react,django
+
 ### Django ###
 *.log
 *.pot
@@ -7,7 +10,7 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-/media
+media
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
@@ -116,3 +119,19 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+### react ###
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
+
+/frontend/gui/node_modules
+bower_components
+
+*.sublime*
+
+#psd
+#thumb
+#sketch
+
+# End of https://www.gitignore.io/api/react,django
